@@ -1,0 +1,222 @@
+body{
+    background-color: rgba(0, 0, 0, 0.10);
+    color: #BF7130FF;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+    min-width: 600px;    
+    padding: 0;
+    margin: 0 auto; 
+    height: 100%;
+}
+header{
+    background-image: url("../images/scott-webb-pots-in-a-row.jpg");
+    background-position: center;
+    background-size: contain;
+    border: double thin rgba(0, 128, 0, 1);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    align-content: center;
+    position: sticky;
+    top: 0;
+    height: 150px;
+}
+header>div{
+    width: 40%;
+    margin: auto 0 20px 0;
+    padding: 0;
+}
+#search{
+    color: #008000;
+    border: solid thin #008000;
+    width: 100%;
+    border-radius: 22px;
+}
+header>a{
+    color: rgba(0, 128, 0, 1);
+    box-sizing: border-box;
+    padding: 0;
+    margin: auto 0 5px 10px;
+}
+.icon{
+    color: #008000;
+    padding: 10px;
+    margin: auto 0;
+    border: solid thick #BF7130FF;
+    border-radius: 25px;
+}
+.justify_space_between{
+    justify-content: space-between;
+}
+
+nav{
+    display: flex;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    /*width: 30%;*/
+    width: auto;
+}
+#logo{    
+    height: 75px;
+    padding: 0;
+    margin: 0; 
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;     
+    align-content: center;
+    justify-content:flex-end;  
+    width: 100%;
+}
+li{    
+    padding: 5px;
+    margin: auto 0 5px 0;
+    width: auto;
+    max-width: 30%;
+}
+header>nav>ul>li>a{
+    display: flex;
+    justify-content: center; 
+    color: #00800000;   
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 1%;
+    padding:1%;
+    text-align: center;
+    border: solid thin transparent;
+    border-radius: 25px;
+    border: double thin rgba(0, 128, 0, 1);
+    width: auto;
+}
+h2{
+    height: auto;
+    padding: 5% auto;
+    margin: 2%;
+}
+.centered{
+    text-align: center; 
+}
+article{
+    height: auto;
+    width: 99%;
+    min-width: 10%;
+    padding: 0 5% 0 5%;
+    margin: 0 auto;
+}
+.justified_indented{
+    text-align: justify;
+    text-indent: 15px;
+}
+aside {
+    padding: 1%; 
+    flex-shrink: 1;
+    width: 15%;
+    background-color: rgba(0, 128, 0, 0.05);
+}
+main{
+    width: 70%;
+    border: double thin rgba(128, 128, 128, 0);
+    border-radius: 25px;
+}
+section{
+    width: 100%;
+}
+iframe{
+    min-width: 400px;
+    width: 30%;    
+    height: auto;
+    aspect-ratio: 16/9;
+}
+#in_article_video{
+    width: auto;
+    min-width: auto;
+}
+#video{
+    min-width: 400px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 1.5% 0 0 0; 
+}
+.box_hor{
+    display: flex;
+}
+.box_vert{
+    display: flex;
+    flex-direction: column; 
+}
+footer>p{
+    padding: 1%;
+    margin: 1% auto;  
+    width: auto;  
+}
+
+#aside_left{
+    text-align: right;
+    margin-right: 0;
+    background-image: url("../images/feey-schefflera.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#aside_right{
+    text-align: left;
+    margin-left: 0;
+    background-image: url("../images/feey-monstera.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.justify_space_evenly{
+    justify-content: space-evenly;
+}
+.text_aside{    
+    font-style: italic;
+    font-size: 11px;    
+}
+header, footer, article{
+    background-color: rgba(0, 128, 0, 0.1);    
+
+}
+aside, article{
+    border: double thin rgba(0, 128, 0, 1);
+    border-radius: 25px;
+}
+footer{
+    background-image: url("../images/scott-webb-pots-in-a-row.jpg");
+    background-position: center;
+    background-size: contain;
+    border: double thin rgba(0, 128, 0, 1);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;    
+    height: 150px;
+}
+main, aside, article{
+    margin: 0.5%;
+}
+/*.main_bg_image{
+    background-image: url("../images/map_of_azerim1.jpg");
+    background-size: contain;
+    background-attachment: scroll;
+}*/
+.icon:hover{
+    color: rgba(146, 255, 146, 100);
+    background-color: rgb(00, 80, 00);
+    border: solid thick transparent;
+    border-radius: 25px;
+    transition: color  0.8s ease-out, background-color  0.8s ease-out;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
+}
