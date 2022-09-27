@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="shortcut icon" href="images/logo_noname.png" type="image/icon">
-    <title>Project Flex</title>
+    <title>Project Floreil</title>
 </head>
 <body>
     <header class="border_thin box_hor justify_space_between header_bg_image">
         <a href="#"><img src="images/logo_floreil_main.png" alt="logo_floreil" id="logo"></a>
         <!--<h1 class="centered" id="site_name">Magasin des plantes pour votre appartements et votre jardin</h1>-->
         <div class="box_hor">
-            <input type="search" id="search" name="search" required minlength="4"size="10">
-            <label for="search"><span class="material-symbols-outlined">search</span></label>
+            <input type="search" id="search" name="search" required minlength="4"size="12">
+            <label for="search" class="icon"><span class="material-symbols-outlined">search</span></label>
         </div>
-        <nav> 
+        <nav class="box_hor justify_space_evenly"> 
             <ul class="box_hor">           
                 <li><a href="#"><span class="material-symbols-outlined icon">favorite</span></a></li>
                     <!--<img src="images/icons/favorite_FILL0_wght400_GRAD0_opsz48.png" class="icon">
@@ -28,7 +28,15 @@
             </ul>
         </nav>
     </header>
-    <div class="box_hor" >
+    <nav class="box_hor menu dropout_menu">
+        <a href="#"><span class="material-symbols-outlined icon">menu</span></a>
+        <ul class="box_hor justify_space_evenly">
+            <li><a href="#">Plantes d'interieur / balcon</a></li>
+            <li><a href="#">Plantes du jardin</a></li>
+            <li><a href="#">Conseils</a></li>
+        </ul>
+    </nav>
+    <div class="box_hor">
         <aside class="box_vert" id="aside_left">
             <h3>Lorem ipsum dolor sit</h3>
             <p class="text_aside">
@@ -37,7 +45,11 @@
                 blanditiis quaerat inventore modi magnam facilis! Dolorem voluptatem nihil blanditiis. Delectus, molestiae.
             </p>
         </aside> 
+    
+         
+        
         <main class="main_bg_image">  <!--il faut separer main et aside-->
+            
             <div class="box_hor justify_space_evenly" id="video" >            
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/-vI5tdORhC0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
@@ -167,6 +179,7 @@
                 
             </div>                 
         </main>
+    
         <aside class="box_vert" id="aside_right"><!--il faut separer main et aside-->
             <h3>Illum expedita</h3>
             <p class="text_aside">

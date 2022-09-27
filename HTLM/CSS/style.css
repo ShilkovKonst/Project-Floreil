@@ -28,8 +28,8 @@ header>div{
 #search{
     color: #008000;
     border: solid thin #008000;
-    width: 100%;
     border-radius: 22px;
+    width: 100%;
 }
 header>a{
     color: rgba(0, 128, 0, 1);
@@ -41,7 +41,7 @@ header>a{
     color: #008000;
     padding: 10px;
     margin: auto 0;
-    border: solid thick #BF7130FF;
+    border: solid thick #008000;
     border-radius: 25px;
 }
 .justify_space_between{
@@ -124,7 +124,7 @@ aside {
     background-color: rgba(0, 128, 0, 0.05);
 }
 main{
-    width: 70%;
+    width: 100%;
     border: double thin rgba(128, 128, 128, 0);
     border-radius: 25px;
 }
@@ -207,7 +207,7 @@ main, aside, article{
     background-attachment: scroll;
 }*/
 .icon:hover{
-    color: rgba(146, 255, 146, 100);
+    color: white;
     background-color: rgb(00, 80, 00);
     border: solid thick transparent;
     border-radius: 25px;
@@ -219,4 +219,15 @@ main, aside, article{
   'wght' 700,
   'GRAD' 0,
   'opsz' 48
+}
+.dropout_menu{
+    width: 70%;
+    position: sticky;
+    top: 150px;
+    height: 100px;
+    margin: auto;
+    padding: 0;
+    border: solid thin #008000;
+    height: auto;
+    width: 70%;
 }
