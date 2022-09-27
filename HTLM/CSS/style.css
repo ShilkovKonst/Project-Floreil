@@ -30,7 +30,7 @@ h1{
     font-style: italic;
     font-weight: bold;
     margin: 0;
-    padding:1%;
+    padding-top: 0;
     text-align: center;
     width: auto;
 }
@@ -175,6 +175,7 @@ iframe{
     width: 30%;    
     height: auto;
     aspect-ratio: 16/9;
+    border: #008000;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -212,14 +213,14 @@ aside {
 #aside_left{
     text-align: right;
     margin-right: 0;
-    background-image: url("../images/feey-schefflera.jpg");
+    
     background-position: center;
     background-size: cover;
 }
 #aside_right{
     text-align: left;
     margin-right: 0;
-    background-image: url();
+    background-image: url("../images/feey-schefflera-big.jpg");
     background-position: center;
     background-size: cover;
     border: solid thin #008000;
