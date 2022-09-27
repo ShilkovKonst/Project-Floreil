@@ -7,28 +7,32 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="shortcut icon" href="images/logo_noname.png" type="image/icon">
+    <script src="https://kit.fontawesome.com/0461c0955a.js" crossorigin="anonymous"></script>
     <title>Project Floreil</title>
 </head>
 <body>
-    <header class="border_thin box_hor justify_space_between header_bg_image">
-        <a href="#"><img src="images/logo_floreil_main.png" alt="logo_floreil" id="logo"></a>
-        <!--<h1 class="centered" id="site_name">Magasin des plantes pour votre appartements et votre jardin</h1>-->
-        <div class="box_hor">
-            <input type="search" id="search" name="search" required minlength="4"size="12">
-            <label for="search" class="icon"><span class="material-symbols-outlined">search</span></label>
-        </div>
-        <nav class="box_hor justify_space_evenly"> 
-            <ul class="box_hor">           
-                <li><a href="#"><span class="material-symbols-outlined icon">favorite</span></a></li>
-                    <!--<img src="images/icons/favorite_FILL0_wght400_GRAD0_opsz48.png" class="icon">
-                        <img src="images/icons/garden_cart_FILL0_wght400_GRAD0_opsz48.png" class="icon">
-                        <img src="images/icons/person_FILL0_wght400_GRAD0_opsz48.png" class="icon">-->
-                <li><a href="#"><span class="material-symbols-outlined icon">garden_cart</span></a></li>
-                <li><a href="#"><span class="material-symbols-outlined icon">person_filled</span></a></li>
-            </ul>
-        </nav>
-    </header>
-    <nav class="box_hor menu dropout_menu">
+    <div class="box_vert" id="h1_header">
+        <!--Заголовок сайта--> 
+        <h1>Magasin des plantes pour vous</h1>
+        <header class="box_hor justify_space_between">
+            <a href="#"><img src="images/logo_floreil_main.png" alt="logo_floreil" id="logo"></a>    
+                <!--Секция поиска-->        
+                <div class="box_hor">
+                    <input type="search" id="search" name="search" required minlength="4"size="12">
+                    <label for="search" class="icon"><span class="material-symbols-outlined">search</span></label>
+                </div>
+            <!--Секция управления личными данными, корзина, желаемое--> 
+            <nav class="box_hor justify_space_evenly"> 
+                <ul class="box_hor">           
+                    <li><a href="#"><span class="material-symbols-outlined icon">favorite</span></a></li>                        
+                    <li><a href="#"><span class="material-symbols-outlined icon">garden_cart</span></a></li>
+                    <li><a href="#"><span class="material-symbols-outlined icon">person_filled</span></a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!--Выпадающее меню--> 
+    <nav class="box_hor dropout_menu">
         <a href="#"><span class="material-symbols-outlined icon">menu</span></a>
         <ul class="box_hor justify_space_evenly">
             <li><a href="#">Plantes d'interieur / balcon</a></li>
@@ -37,32 +41,32 @@
         </ul>
     </nav>
     <div class="box_hor">
-        <aside class="box_vert" id="aside_left">
+        <!--<aside class="box_vert" id="aside_left">
             <h3>Lorem ipsum dolor sit</h3>
             <p class="text_aside">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Illum expedita, pariatur laborum cumque commodi culpa provident hic? Dolore, 
                 blanditiis quaerat inventore modi magnam facilis! Dolorem voluptatem nihil blanditiis. Delectus, molestiae.
             </p>
-        </aside> 
+        </aside>--> 
     
          
-        
-        <main class="main_bg_image">  <!--il faut separer main et aside-->
-            
-            <div class="box_hor justify_space_evenly" id="video" >            
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/-vI5tdORhC0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        <!--Секция ссылок на ютуб видео-советов-->
+        <main>  <!--il faut separer main et aside-->
+            <div class="box_hor justify_space_evenly" id="video" > 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8ZXDdFPsCfA" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Zf4MoLO2yQU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ofeQ8eDHtqg" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/PZEVioGqyAg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/cz0NbmjmJyc" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
-            </div>   
+            </div>
+            <!--Основная секция ссылок-витрин на разделы сайта-->
             <div class="box_vert">            
-                <section class="border_thin box_hor">                          
-                    <article class="box_vert justified_indented border_thin">
-                        <h2 class="centered">Dolorem voluptatem nihil</h2>
-                        <p>
+                <section class="box_hor">                          
+                    <article class="box_vert justified_indented ">
+                        <h2>Dolorem voluptatem nihil</h2>
+                        <p class="article_interieur">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                 Fuga aliquid, iure animi soluta facere ex facilis reprehenderit suscipit? 
                                 Ut cum doloremque numquam architecto praesentium sint obcaecati officiis ea ratione a!
@@ -87,11 +91,12 @@
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Quaerat animi nulla dolorem ducimus quae recusandae numquam. 
                                 Quasi blanditiis alias ducimus vitae iste architecto modi sit officiis dolore earum! Accusamus, eaque.
+                                
                         </p>
                     </article>                            
-                    <article  class="box_vert justified_indented border_thin">
-                        <h2 class="centered">Vitae hic dolor</h2>
-                        <p>
+                    <article  class="box_vert justified_indented ">
+                        <h2>Vitae hic dolor</h2>
+                        <p class="article_exterieur">
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                                 Beatae, ullam magni eaque iure minima suscipit necessitatibus quidem est error, 
                                 qui architecto recusandae? Hic repellendus illum provident sapiente natus, neque deleniti.
@@ -99,56 +104,10 @@
                                 Dolor, suscipit? Tempora reiciendis a tempore exercitationem laborum, 
                                 vero sit qui ipsa. Vitae hic dolor quia reprehenderit cumque officiis, minima rem iste!
                         </p >
-                        <iframe src="https://www.youtube.com/embed/PEe-ZeVbTLo" title="YouTube video player" id=in_article_video allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                        </iframe>
-                    </article>             
-                </section>
-                <!--<section class="border_thin box_hor">  
-                    <article class="box_vert justified_indented border_thin">
-                        <h2 class="centered">Vitae hic dolor</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                            Beatae, ullam magni eaque iure minima suscipit necessitatibus quidem est error, 
-                            qui architecto recusandae? Hic repellendus illum provident sapiente natus, neque deleniti.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                            Beatae, ullam magni eaque iure minima suscipit necessitatibus quidem est error, 
-                            qui architecto recusandae? Hic repellendus illum provident sapiente natus, neque deleniti.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                            Beatae, ullam magni eaque iure minima suscipit necessitatibus quidem est error, 
-                            qui architecto recusandae? Hic repellendus illum provident sapiente natus, neque deleniti.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                            Beatae, ullam magni eaque iure minima suscipit necessitatibus quidem est error, 
-                            qui architecto recusandae? Hic repellendus illum provident sapiente natus, neque deleniti.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                            Beatae, ullam magni eaque iure minima suscipit necessitatibus quidem est error, 
-                            qui architecto recusandae? Hic repellendus illum provident sapiente natus, neque deleniti.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                            Beatae, ullam magni eaque iure minima suscipit necessitatibus quidem est error, 
-                            qui architecto recusandae? Hic repellendus illum provident sapiente natus, neque deleniti.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        </p>
-                    </article>                         
-                    <article class="box_vert justified_indented border_thin">
-                        <h2 class="centered">Fuga aliquid</h2>
-                        <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                                Beatae, ullam magni eaque iure minima suscipit necessitatibus quidem est error, 
-                                qui architecto recusandae? Hic repellendus illum provident sapiente natus, neque deleniti. 
+                    </article>   
+                    <article class="box_vert justified_indented ">
+                        <h2>Dolorem voluptatem nihil</h2>
+                        <p class="article_conseils">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                 Fuga aliquid, iure animi soluta facere ex facilis reprehenderit suscipit? 
                                 Ut cum doloremque numquam architecto praesentium sint obcaecati officiis ea ratione a!
@@ -172,14 +131,13 @@
                                 Ut cum doloremque numquam architecto praesentium sint obcaecati officiis ea ratione a!
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Quaerat animi nulla dolorem ducimus quae recusandae numquam. 
-                                Quasi blanditiis alias ducimus vitae iste architecto modi sit officiis dolore earum! Accusamus, eaque.                           
+                                Quasi blanditiis alias ducimus vitae iste architecto modi sit officiis dolore earum! Accusamus, eaque.
                         </p>
-                    </article>           
-                </section>-->
-                
+                    </article>                                      
+                </section>                
             </div>                 
         </main>
-    
+        <!--Боковая секция дополнительной информации(пока еще не придумал для чего)-->
         <aside class="box_vert" id="aside_right"><!--il faut separer main et aside-->
             <h3>Illum expedita</h3>
             <p class="text_aside">
@@ -192,11 +150,13 @@
             </p>
         </aside>
     </div>
-    <footer class="border_thin box_hor justify_space_evenly">
+    <!--Секция подвала с контактной информацией и прочей подобной лабудой-->
+    <footer class=" box_hor justify_space_evenly">
         <p>Copyright</p>
         <p>Contact</p>
         <p>Mentions égales</p>
-        <p>Reseaux sociaux</p>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>                        
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
     </footer>
 </body>
 </html>

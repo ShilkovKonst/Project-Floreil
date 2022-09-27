@@ -1,34 +1,48 @@
 body{
     background-color: rgba(0, 0, 0, 0.10);
-    color: #BF7130FF;
+    color: #008000;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 12px;
     min-width: 600px;    
     padding: 0;
     margin: 0 auto; 
     height: 100%;
+    background-image:linear-gradient(#CC9A2975, #BF713050), url("../images/scott-webb-light-grass.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
-header{
-    background-image: url("../images/scott-webb-pots-in-a-row.jpg");
-    background-position: center;
-    background-size: contain;
-    border: double thin rgba(0, 128, 0, 1);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    align-content: center;
+header{    
+    align-content: center;    
+    height: 100px;
+}
+#h1_header{
     position: sticky;
     top: 0;
-    height: 150px;
+    background-image:radial-gradient(white, #00800000), url("../images/kelly-vohs-grass-footer.jpg");
+    background-position: left;
+    background-size: contain;
+    border: double thin rgba(0, 128, 0, 1);
+    border-bottom-right-radius: 25px;    
+}
+h1{
+    align-items: center;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+    padding:1%;
+    text-align: center;
+    width: auto;
 }
 header>div{
     width: 40%;
     margin: auto 0 20px 0;
-    padding: 0;
 }
 #search{
     color: #008000;
     border: solid thin #008000;
     border-radius: 22px;
+    padding-right: -100px;
     width: 100%;
 }
 header>a{
@@ -53,7 +67,6 @@ nav{
     align-content: center;
     margin: 0;
     padding: 0;
-    /*width: 30%;*/
     width: auto;
 }
 #logo{    
@@ -84,49 +97,75 @@ header>nav>ul>li>a{
     color: #00800000;   
 }
 
-h1{
-    display: flex;
-    align-items: center;
-    font-size: 40px;
-    font-style: italic;
-    font-weight: bold;
-    margin: 1%;
-    padding:1%;
-    text-align: center;
-    border: solid thin transparent;
-    border-radius: 25px;
-    border: double thin rgba(0, 128, 0, 1);
-    width: auto;
-}
 h2{
     height: auto;
     padding: 5% auto;
     margin: 2%;
 }
-.centered{
-    text-align: center; 
-}
 article{
     height: auto;
-    width: 99%;
-    min-width: 10%;
-    padding: 0 5% 0 5%;
+    width: auto;
+    min-width: 350px;
+    padding: 0 1% 0 1%;
     margin: 0 auto;
+    border: double thin rgba(0, 128, 0, 1);
+    border-radius: 25px;
+       
 }
+article>p{    
+    width: 400px;
+    height: 400px;
+    color: #00800000; 
+}
+.article_interieur{
+    background-image: linear-gradient(#CC9A2900, #CC9A2900), url("../images/plantes_interieur.jpeg");
+    background-size: cover;
+    border-radius: 20px;
+}
+.article_exterieur{
+    background-image: linear-gradient(#CC9A2900, #CC9A2900), url("../images/plantes_exterieur.jpeg");
+    background-size: cover;
+    border-radius: 20px;
+}
+.article_conseils{
+    background-image: linear-gradient(#CC9A2900, #CC9A2900), url("../images/feey-monstera-big.jpg");
+    background-size: cover;
+    border-radius: 20px;
+}
+/*как сделать плавное проявление градиента
+https://snipp.ru/html-css/translucent-gradient*/
+.article_interieur:hover{
+    color: #000000;
+    background-image: linear-gradient(#CC9A2999, #CC9A2999), url("../images/plantes_interieur.jpeg");
+    transition: all 2s;
+}
+.article_exterieur:hover{
+    color: #000000;
+    background-image: linear-gradient(#CC9A2999, #CC9A2999), url("../images/plantes_exterieur.jpeg");
+    transition: all 2s;
+}
+.article_conseils:hover{
+    color: #000000;
+    background-image: linear-gradient(#CC9A2999, #CC9A2999), url("../images/feey-monstera-big.jpg");
+    transition: all 2s;
+}
+
+
+
 .justified_indented{
     text-align: justify;
     text-indent: 15px;
 }
-aside {
-    padding: 1%; 
-    flex-shrink: 1;
-    width: 15%;
-    background-color: rgba(0, 128, 0, 0.05);
-}
+
 main{
     width: 100%;
     border: double thin rgba(128, 128, 128, 0);
     border-radius: 25px;
+    
+}
+main>div>section{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 section{
     width: 100%;
@@ -136,6 +175,8 @@ iframe{
     width: 30%;    
     height: auto;
     aspect-ratio: 16/9;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 #in_article_video{
     width: auto;
@@ -144,8 +185,8 @@ iframe{
 #video{
     min-width: 400px;
     flex-wrap: wrap;
-    padding: 0;
     margin: 1.5% 0 0 0; 
+    padding-bottom: 10px;
 }
 .box_hor{
     display: flex;
@@ -158,8 +199,16 @@ footer>p{
     padding: 1%;
     margin: 1% auto;  
     width: auto;  
+    font-weight: bold;
 }
-
+aside {
+    padding: 1%; 
+    flex-shrink: 1;
+    width: 250px;
+    height: auto;
+    margin-right: 0;
+    background-color: rgba(0, 128, 0, 0.05);
+}
 #aside_left{
     text-align: right;
     margin-right: 0;
@@ -169,10 +218,13 @@ footer>p{
 }
 #aside_right{
     text-align: left;
-    margin-left: 0;
-    background-image: url("../images/feey-monstera.jpg");
+    margin-right: 0;
+    background-image: url();
     background-position: center;
     background-size: cover;
+    border: solid thin #008000;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 .justify_space_evenly{
     justify-content: space-evenly;
@@ -181,31 +233,28 @@ footer>p{
     font-style: italic;
     font-size: 11px;    
 }
-header, footer, article{
+/*header, h1, footer, article{
     background-color: rgba(0, 128, 0, 0.1);    
 
-}
-aside, article{
-    border: double thin rgba(0, 128, 0, 1);
-    border-radius: 25px;
-}
+}*/
 footer{
-    background-image: url("../images/scott-webb-pots-in-a-row.jpg");
+    background-image: url("../images/kelly-vohs-grass-footer.jpg");
     background-position: center;
     background-size: contain;
     border: double thin rgba(0, 128, 0, 1);
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;    
-    height: 150px;
+    height: 75px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    margin: 0;
+    padding-top: 5px;
 }
 main, aside, article{
     margin: 0.5%;
 }
-/*.main_bg_image{
-    background-image: url("../images/map_of_azerim1.jpg");
-    background-size: contain;
-    background-attachment: scroll;
-}*/
 .icon:hover{
     color: white;
     background-color: rgb(00, 80, 00);
@@ -220,14 +269,18 @@ main, aside, article{
   'GRAD' 0,
   'opsz' 48
 }
+.fa-brands{
+    font-size: 25px;
+    color: aliceblue;
+}
 .dropout_menu{
-    width: 70%;
-    position: sticky;
+    width: 25%;
+    min-width: 250px;
+    position: fixed;
     top: 150px;
-    height: 100px;
+    height: 60px;
     margin: auto;
     padding: 0;
     border: solid thin #008000;
-    height: auto;
-    width: 70%;
+    background-color: antiquewhite;
 }
