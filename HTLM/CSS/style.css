@@ -30,7 +30,8 @@ h1{
     font-style: italic;
     font-weight: bold;
     margin: 0;
-    padding-top: 0;
+    padding-top: 0.5%;
+    padding-bottom: 0;
     text-align: center;
     width: auto;
 }
@@ -113,8 +114,8 @@ article{
        
 }
 article>p{    
-    width: 400px;
-    height: 400px;
+    width: 375px;
+    height: 375px;
     color: #00800000; 
 }
 .article_interieur{
