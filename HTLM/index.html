@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="shortcut icon" href="images/logo_noname.png" type="image/icon">
     <script src="https://kit.fontawesome.com/0461c0955a.js" crossorigin="anonymous"></script>
@@ -16,14 +16,14 @@
         <h1>Magasin des plantes pour vous</h1>
         <header class="box_hor justify_space_between">
             <a href="#"><img src="images/logo_floreil_main.png" alt="logo_floreil" id="logo"></a>    
-                <!--Секция поиска-->        
-                <div class="box_hor">
-                    <input type="search" id="search" name="search" required minlength="4"size="12">
-                    <label for="search" class="icon"><span class="material-symbols-outlined">search</span></label>
-                </div>
+            <!--Секция поиска-->        
+            <div class="box_hor">
+                <input type="search" id="search" name="q" required minlength="4"size="12" placeholder="Je cherche une plante...">
+                <label for="search" class=""><span class="material-symbols-outlined icon">search</span></label>
+            </div>
             <!--Секция управления личными данными, корзина, желаемое--> 
             <nav class="box_hor justify_space_evenly"> 
-                <ul class="box_hor">           
+                <ul class="box_hor" id="menu_personal">           
                     <li><a href="#"><span class="material-symbols-outlined icon">favorite</span></a></li>                        
                     <li><a href="#"><span class="material-symbols-outlined icon">garden_cart</span></a></li>
                     <li><a href="#"><span class="material-symbols-outlined icon">person_filled</span></a></li>
@@ -32,9 +32,9 @@
         </header>
     </div>
     <!--Выпадающее меню--> 
-    <nav class="box_hor dropout_menu">
-        <a href="#"><span class="material-symbols-outlined icon">menu</span></a>
-        <ul class="box_hor justify_space_evenly">
+    <nav class="box_vert dropout_menu">
+        <a href="#" id="menu_lateral"><span class="material-symbols-outlined icon">menu</span></a>
+        <ul class="box_vert justify_space_evenly dropout_menu_list">
             <li><a href="#">Plantes d'interieur / balcon</a></li>
             <li><a href="#">Plantes du jardin</a></li>
             <li><a href="#">Conseils</a></li>
@@ -52,21 +52,15 @@
     
          
         <!--Секция ссылок на ютуб видео-советов-->
-        <main>  <!--il faut separer main et aside-->
-            <div class="box_hor justify_space_evenly" id="video" > 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/8ZXDdFPsCfA" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ofeQ8eDHtqg" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/cz0NbmjmJyc" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-            </div>
+        <main>            
             <!--Основная секция ссылок-витрин на разделы сайта-->
-            <div class="box_vert">            
+            <div class="box_vert"> 
+                <h2>Section principale</h2>        
                 <section class="box_hor">                          
-                    <article class="box_vert justified_indented ">
-                        <h2>Dolorem voluptatem nihil</h2>
-                        <p class="article_interieur">
+                    <article class=" justified_indented article_interieur">
+                        <div class="box_vert">
+                        <h3>Dolorem voluptatem nihil</h3>
+                        <p>
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                 Fuga aliquid, iure animi soluta facere ex facilis reprehenderit suscipit? 
                                 Ut cum doloremque numquam architecto praesentium sint obcaecati officiis ea ratione a!
@@ -76,27 +70,14 @@
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                 Fuga aliquid, iure animi soluta facere ex facilis reprehenderit suscipit? 
                                 Ut cum doloremque numquam architecto praesentium sint obcaecati officiis ea ratione a!
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quaerat animi nulla dolorem ducimus quae recusandae numquam. 
-                                Quasi blanditiis alias ducimus vitae iste architecto modi sit officiis dolore earum! Accusamus, eaque.
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                                Fuga aliquid, iure animi soluta facere ex facilis reprehenderit suscipit? 
-                                Ut cum doloremque numquam architecto praesentium sint obcaecati officiis ea ratione a!
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quaerat animi nulla dolorem ducimus quae recusandae numquam. 
-                                Quasi blanditiis alias ducimus vitae iste architecto modi sit officiis dolore earum! Accusamus, eaque.
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                                Fuga aliquid, iure animi soluta facere ex facilis reprehenderit suscipit? 
-                                Ut cum doloremque numquam architecto praesentium sint obcaecati officiis ea ratione a!
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quaerat animi nulla dolorem ducimus quae recusandae numquam. 
-                                Quasi blanditiis alias ducimus vitae iste architecto modi sit officiis dolore earum! Accusamus, eaque.
-                                
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.                                
                         </p>
+                        </div>
                     </article>                            
-                    <article  class="box_vert justified_indented ">
-                        <h2>Vitae hic dolor</h2>
-                        <p class="article_exterieur">
+                    <article  class="box_vert justified_indented article_exterieur">
+                        <div class="box_vert">
+                        <h3>Vitae hic dolor</h3>
+                        <p>
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                                 Beatae, ullam magni eaque iure minima suscipit necessitatibus quidem est error, 
                                 qui architecto recusandae? Hic repellendus illum provident sapiente natus, neque deleniti.
@@ -104,10 +85,12 @@
                                 Dolor, suscipit? Tempora reiciendis a tempore exercitationem laborum, 
                                 vero sit qui ipsa. Vitae hic dolor quia reprehenderit cumque officiis, minima rem iste!
                         </p >
+                        </div>
                     </article>   
-                    <article class="box_vert justified_indented ">
-                        <h2>Dolorem voluptatem nihil</h2>
-                        <p class="article_conseils">
+                    <article class="box_vert justified_indented article_conseils">
+                        <div class="box_vert">
+                        <h3>Dolorem voluptatem nihil</h3>
+                        <p>
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                 Fuga aliquid, iure animi soluta facere ex facilis reprehenderit suscipit? 
                                 Ut cum doloremque numquam architecto praesentium sint obcaecati officiis ea ratione a!
@@ -119,24 +102,24 @@
                                 Ut cum doloremque numquam architecto praesentium sint obcaecati officiis ea ratione a!
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Quaerat animi nulla dolorem ducimus quae recusandae numquam. 
-                                Quasi blanditiis alias ducimus vitae iste architecto modi sit officiis dolore earum! Accusamus, eaque.
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                                Fuga aliquid, iure animi soluta facere ex facilis reprehenderit suscipit? 
-                                Ut cum doloremque numquam architecto praesentium sint obcaecati officiis ea ratione a!
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quaerat animi nulla dolorem ducimus quae recusandae numquam. 
-                                Quasi blanditiis alias ducimus vitae iste architecto modi sit officiis dolore earum! Accusamus, eaque.
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                                Fuga aliquid, iure animi soluta facere ex facilis reprehenderit suscipit? 
-                                Ut cum doloremque numquam architecto praesentium sint obcaecati officiis ea ratione a!
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Quaerat animi nulla dolorem ducimus quae recusandae numquam. 
-                                Quasi blanditiis alias ducimus vitae iste architecto modi sit officiis dolore earum! Accusamus, eaque.
                         </p>
+                        </div>
                     </article>                                      
                 </section>                
-            </div>                 
+            </div>   
+            <div class="box_vert">
+                <h2>Section audio-visuelle</h2>
+                <div class="box_hor justify_space_evenly" id="video" > 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8ZXDdFPsCfA" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ofeQ8eDHtqg" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cz0NbmjmJyc" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                </div>        
         </main>
+        
         <!--Боковая секция дополнительной информации(пока еще не придумал для чего)-->
         <aside class="box_vert" id="aside_right"><!--il faut separer main et aside-->
             <h3>Illum expedita</h3>
