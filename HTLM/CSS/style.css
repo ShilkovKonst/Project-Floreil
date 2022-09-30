@@ -186,7 +186,7 @@ header>a{
 #dropout_menu_bouton:hover ~ #dropout_menu_list, #dropout_menu_list:hover {
     visibility: visible;
     position: sticky;
-    top: 190px;
+    top: 202px;
     opacity: 1;
     transition: all 0.3s;
 }
@@ -320,15 +320,17 @@ iframe{
 /*Секция правого бокового стационарного меню*/
 aside {
     padding: 1%; 
-    flex-shrink: 1;
+    /*flex-shrink: 1;*/
     width: 250px;
-    height: 750px;
+    height: 500px;
+    margin-top: 0;
     margin-right: 0;
     background-color: rgba(0, 128, 0, 0.05);
 }
 #aside_right{
     text-align: left;
     margin-right: 0;
+    margin-top: 0;
     background-image: url("../images/feey-schefflera-big.jpg");
     background-position: center;
     background-size: cover;
@@ -348,7 +350,7 @@ aside {
 #aside_right_bouton:hover ~ #aside_right, #aside_right:hover {
     visibility: visible;
     position: sticky;
-    top: 190px;
+    top: 202px;
     opacity: 1;
     transition: all 0.3s;
 }
@@ -457,6 +459,7 @@ footer>div>div>p, footer>div>div>a>p{
 .fa-bars{
     color: #008000;    
     padding: 0 5px;
+    margin: 0;
 }
 .fa-maximize{
     padding: 5px;
