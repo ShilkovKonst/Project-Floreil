@@ -1,8 +1,7 @@
 body{
-    background-color: rgba(0, 0, 0, 0.10);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 12px;
-    min-width: 600px;    
+    font-size: 16px;
+    min-width: 900px;    
     padding: 0;
     margin: 0 auto; 
     height: 100%;
@@ -10,6 +9,8 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
+
+/*Секция шапки и заголовков*/
 header{    
     align-content: center;    
     height: 100px;
@@ -36,19 +37,17 @@ h1{
     width: auto;
 }
 h2{
-    color: #008000;
     align-items: center;
     font-size: 24px;
     font-style: italic;
     font-weight: bold;
     height: auto;
     padding: 5% auto;
-    margin: 2%;
+    margin: 0.5%;
     text-align: center;
     border-top: solid thick #008000;
 }
 h3{
-    color: #008000;
     align-items: center;
     font-size: 20px;
     font-style: italic;
@@ -58,12 +57,28 @@ h3{
     margin: 2%;
     text-align: center;
 }
-header>div{
+header>a{
+    color: rgba(0, 128, 0, 1);
+    padding: 0;
+    margin: auto 0 5px 10px;
+}
+#logo{    
+    height: 75px;
+    padding: 0;
+    margin: 0; 
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+}
+
+/*Секция поиска*/
+#search_menu{
     align-content: center;
     justify-content: baseline;
     height: 54px;
     width: 40%;
-    margin: auto 0 10px 0;
+    padding-right: 15px;
+    margin: auto 0 15px 0;
 }
 #search{
     color: #008000;
@@ -74,56 +89,130 @@ header>div{
     height: 36px;
     width: 100%;
     margin: auto;
+    margin-right: 5px;
 }
-header>a{
-    color: rgba(0, 128, 0, 1);
-    box-sizing: border-box;
-    padding: 0;
-    margin: auto 0 5px 10px;
+.text_center_vert{
+    display: block;
+    align-self: center;
 }
-.icon{
-    color: #008000;
-    padding: 10px;
-    margin: auto 0;
-    border: solid thick #008000;
-    border-radius: 25px;
-}
-.justify_space_between{
-    justify-content: space-between;
+.fa-bars:hover, .fa-magnifying-glass:hover{
+    text-shadow: 1px 1px 2px black;    
+    transition: color  0.1s ease-out, background-color  0.1s ease-out;
 }
 
-nav{
-    align-content: center;
-    margin: 0;
-    padding: 0;
-    width: auto;
-}
-#logo{    
-    height: 75px;
-    padding: 0;
-    margin: 0; 
-    display: flex;
-    align-self: center;
-    justify-content: space-around;
-}
+/*Секция управления личными данными, корзина, желаемое*/ 
 #menu_personal{
+    align-content: center;
+    margin: auto 0 25px 0;
+    padding: 0;
+    height: 54px;
+    width: auto;
+}
+#menu_personal_list{
     margin: 0;
     padding: 0;
-    list-style-type: none;     
-    align-content: center;
-    justify-content:flex-end;  
-    width: 100%;
-}
-#menu_personal>li{    
-    padding: 5px;
-    margin: auto 0 5px 0;
+    list-style-type: none;
+    height: auto;  
     width: auto;
-    max-width: 30%;
 }
-header>nav>ul>li>a{
+#menu_personal_list>li{ 
+    margin: 0 15px;
+    height: auto;
+    width: auto;
+}
+#menu_personal_list>li>a{
     display: flex;
     justify-content: center; 
-    color: #00800000;   
+    text-decoration: none;
+    margin: auto 0;    
+    height: 100%;
+    width: 100%;
+}
+.menu_personal_bouton{
+    padding: 10px;
+    border: solid thin #00800000;
+}
+.menu_personal_bouton:hover{ 
+    text-shadow: 1px 1px 2px black;
+    border-radius: 10px;
+    border: solid thin #008000;
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+    transition: color  0.1s ease-out, background-color  0.1s ease-out;
+}
+#search:focus ~ .menu_personal_bouton{ 
+    text-shadow: none;
+}
+
+/*Выпадающее левое боковое меню*/
+#dropout_menu{
+    align-content:flex-start;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;    
+}
+#dropout_menu_bouton{
+    position: sticky;
+    top: 152px;
+    margin-right: auto;
+}
+#dropout_menu_list{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 150px;
+    list-style-type: none;   
+    margin: 0;  
+    padding: 5px 0 0 0;    
+    border: solid thin #D6902B; 
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #CC9A2999;
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+    /*transition: all 0.3s;*/
+}
+#dropout_menu_list>li{
+    padding: 10px 0px 10px 5px;
+    margin-right: 15px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    height: auto;
+}
+#dropout_menu_list>li>a{
+    text-decoration: none;
+
+}
+#dropout_menu_bouton:hover ~ #dropout_menu_list, #dropout_menu_list:hover {
+    visibility: visible;
+    position: sticky;
+    top: 190px;
+    opacity: 1;
+    transition: all 0.3s;
+}
+#dropout_menu_bouton:hover{
+    border: solid thin #008000;
+    border-radius: 10px;
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+}
+#dropout_menu_list>li:hover{
+    border: solid thin #D6902B;
+    border-radius: 10px;
+    text-shadow: 0.5px 0.5px 1px black;    
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+    transition: all 0.1s;
+}
+
+/*Главная секция*/
+main{
+    width: 100%;
+    border-radius: 25px;    
+}
+#articles_box{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
 }
 article{
     height: 390px;
@@ -132,93 +221,76 @@ article{
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    /*border: solid thick outset rgba(0, 128, 0, 1);*/
     border-radius: 250px;
-    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.66);
-    transition: all 0.5s ease-in-out;
+    box-shadow: 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+    transition: all 0.3s ease-in-out;
 }
 article:hover{    
     height: 410px;    
     width: 410px;
     border-radius: 25px;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.66); 
-    transition: all 0.5s ease-in-out;
+    box-shadow: 5px 5px 2.5px 2.5px rgba(0, 0, 0, 0.66); 
+    transition: all 0.3s ease-in-out;
 }
 article>div{
     padding: 0;
     margin: 0;
     height: 100%;
     width: 100%;    
-    background-color: #bf713075;
+    background-color: #CC9A2999;
     border-radius: 250px;
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 article>div:hover{
     border-radius: 25px;
     opacity: 1;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 article>div>p{       
     height: 100%;
-    width: 95%;
+    width: 100%;
     padding: 0 10px;
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
 article>div>p:hover{
     opacity: 1;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .article_interieur{
     background-image: url("../images/plantes_interieur.jpeg");
     background-size: cover;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .article_exterieur{
     background-image: url("../images/plantes_exterieur.jpeg");
     background-size: cover;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .article_conseils{
     background-image: url("../images/feey-monstera-big.jpg");
     background-size: cover;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-
 .article_interieur:hover{
     color: #000000;
     background-image: url("../images/plantes_interieur.jpeg");
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .article_exterieur:hover{
     color: #000000;
     background-image: url("../images/plantes_exterieur.jpeg");
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .article_conseils:hover{
     color: #000000;
     background-image: url("../images/feey-monstera-big.jpg");
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-.justified_indented{
-    text-align: justify;
-    text-indent: 15px;
-}
-main{
-    margin-left: 50px;
-    width: 100%;
-    border: double thin rgba(128, 128, 128, 0);
-    border-radius: 25px;
-    
-}
-main>div>section{
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-section{
-    width: 100%;
-}
+
+/*Секция видео-параметров*/
 iframe{
     min-width: 400px;
     width: 30%;    
@@ -227,7 +299,7 @@ iframe{
     border: #008000;
     border-radius: 10px;
     margin-bottom: 10px;
-    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.66);
+    box-shadow: 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
 }
 #in_article_video{
     width: auto;
@@ -239,19 +311,11 @@ iframe{
     margin: 1.5% 0 0 0; 
     padding-bottom: 10px;
 }
-.box_hor{
-    display: flex;
+.section_background{
+    background: linear-gradient(#BF713075, #BF713000);
 }
-.box_vert{
-    display: flex;
-    flex-direction: column; 
-}
-footer>p{
-    padding: 1%;
-    margin: 1% auto;  
-    width: auto;  
-    font-weight: bold;
-}
+
+/*Секция правого бокового стационарного меню*/
 aside {
     padding: 1%; 
     flex-shrink: 1;
@@ -263,7 +327,6 @@ aside {
 #aside_left{
     text-align: right;
     margin-right: 0;
-    
     background-position: center;
     background-size: cover;
 }
@@ -277,37 +340,137 @@ aside {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
 }
-.justify_space_evenly{
-    justify-content: space-evenly;
+
+/*Секция подвала*/
+footer>p{
+    padding: 1%;
+    margin: 1% auto;  
+    width: auto;  
+    font-weight: bold;
 }
-.text_aside{    
-    font-style: italic;
-    font-size: 11px;    
-}
-footer{
+#footer{
     background-image: url("../images/kelly-vohs-grass-footer.jpg");
     background-position: center;
     background-size: contain;
     border: double thin rgba(0, 128, 0, 1);
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;    
-    height: 75px;
+    height: 125px;
     position: fixed;
     right: 0;
     bottom: 0;
+    visibility: visible;
     width: 250px;
     margin: 0;
-    padding-top: 5px;
+    padding: 5px;
+    font-size: 12px;
 }
-main{
-    margin: 0.5%;
+footer>div>div{
+    height: 25px;
+    padding: 5px 0;
 }
-.icon:hover{
-    color: white;
-    background-color: rgb(00, 80, 00);
-    border: solid thick transparent;
-    border-radius: 25px;
-    transition: color  0.8s ease-out, background-color  0.8s ease-out;
+footer>div>div>p, footer>div>div>a>p{
+    margin: 0;
+    padding-right: 10px;
+}
+#social_network_icons{
+    height: 40px;
+    padding: 0;
+}
+
+/*Попытка с помощью кнопки и псевдокласса фокус сделать включение и выключение подвала*/
+
+/*#expand{
+    color: rgb(204, 0, 255);
+    position: fixed;
+    visibility: visible;
+    bottom: 10px;
+    right: 10px;
+}
+#collapse{
+    color: rgb(0, 136, 255);
+    position: fixed;
+    visibility: visible;
+    bottom: 50px;
+    right: 50px;
+}
+
+#expand:focus ~ #footer, #collapse{
+    visibility: visible;
+}
+#expand:focus{
+    visibility: hidden;    
+}
+#collapse:focus ~ #footer,#collapse{
+    visibility: hidden;
+}
+#collapse:focus ~ #expand{
+    visibility: visible;
+}
+#expand:hover{
+    color: rgba(0, 128, 0, 1);
+}
+#collapse:hover{
+    color: rgb(255, 0, 0);    
+}
+#footer_visibility_checker{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+#footer_visibility_checker:focus ~ #footer, #footer_visibility_checker:focus ~ #expand{
+    visibility: hidden;
+}
+#footer_visibility_checker:focus ~ {
+    visibility: hidden;
+}*/
+
+
+/*Секция иконок-кнопок*/
+
+.fa-brands{
+    margin: auto 0;
+    color: aliceblue;
+}
+.fa-regular{
+    margin: auto 0;
+}
+.fa-bars{
+    color: #008000;    
+    padding: 0 5px;
+}
+.menu_personal_bouton{
+    color: #008000;    
+    padding: 9px;    
+}
+
+
+
+
+.box_hor{
+    display: flex;
+}
+.box_vert{
+    display: flex;
+    flex-direction: column; 
+}
+.justified_indented{
+    text-align: justify;
+    text-indent: 15px;
+}
+.justify_space_evenly{
+    justify-content: space-evenly;
+}
+.text_aside{    
+    font-style: italic;
+    font-weight: bold;
+    font-size: 12px;    
+}
+.justify_space_between{
+    justify-content: space-between;
+}
+.text_center_vert{
+    vertical-align: middle;
 }
 .material-symbols-outlined {
   font-variation-settings:
@@ -316,30 +479,7 @@ main{
   'GRAD' 0,
   'opsz' 48
 }
-.fa-brands{
-    font-size: 25px;
-    color: aliceblue;
-}
-.dropout_menu{
-    width: 150px;
-    position: fixed;
-    top: 150px;
-    height: 60px;
-    margin: auto;
-    padding: 0;
-    /*border: solid thin #008000;  */  
-}
-.dropout_menu_list{
-    /*visibility: collapse;
-    opacity: 0;*/
-    transition: all 0.3s ease-in-out;
-}
-.dropout_menu_list{
-    padding-left: 20px;
-    width: 150px;
-}
-#menu_lateral:hover ~ .dropout_menu_list{
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
+a { color: inherit; } 
+*{
+    box-sizing: border-box;
 }
