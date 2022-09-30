@@ -77,11 +77,12 @@
             <!--Основная секция ссылок-витрин на разделы сайта-->
             <div class="box_vert section_background" id="article_section"> 
                 <h2>Section principale</h2>        
-                <section class="box_hor" id="articles_box">                          
-                    <article class=" justified_indented article_interieur">
-                        <div class="box_vert">
-                        <h3>Dolorem voluptatem nihil</h3>
-                        <p>
+                <section class="box_hor" id="articles_box">   
+                    <a href="#" class="article_link">                       
+                        <article class=" justified_indented article_interieur">
+                            <div class="box_vert">
+                            <h3>LANTES D'INTERIEUR</h3>
+                            <p>
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                 Fuga aliquid, iure animi soluta facere ex facilis reprehenderit suscipit? 
                                 Ut cum doloremque numquam architecto praesentium sint obcaecati officiis ea ratione a!
@@ -90,26 +91,30 @@
                                 Quasi blanditiis alias ducimus vitae iste architecto modi sit officiis dolore earum! Accusamus, eaque.
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                 Fuga aliquid, iure animi soluta facere ex facilis reprehenderit suscipit?            
-                        </p>
-                        </div>
-                    </article>                            
-                    <article  class="box_vert justified_indented article_exterieur">
-                        <div class="box_vert">
-                        <h3>Vitae hic dolor</h3>
-                        <p>
+                            </p>
+                            </div>
+                        </article>
+                    </a>  
+                    <a href="#" class="article_link">                           
+                        <article  class="box_vert justified_indented article_exterieur">
+                            <div class="box_vert">
+                            <h3>PLANTES DU JARDIN</h3>
+                            <p>
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                                 Beatae, ullam magni eaque iure minima suscipit necessitatibus quidem est error, 
                                 qui architecto recusandae? Hic repellendus illum provident sapiente natus, neque deleniti.
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Dolor, suscipit? Tempora reiciendis a tempore exercitationem laborum, 
                                 vero sit qui ipsa. Vitae hic dolor quia reprehenderit cumque officiis, minima rem iste!
-                        </p >
-                        </div>
-                    </article>   
-                    <article class="box_vert justified_indented article_conseils">
-                        <div class="box_vert">
-                        <h3>Dolorem voluptatem nihil</h3>
-                        <p>
+                            </p >
+                            </div>
+                        </article> 
+                    </a>
+                    <a href="#" class="article_link">   
+                        <article class="box_vert justified_indented article_conseils">
+                            <div class="box_vert">
+                            <h3>CONSEILS</h3>
+                            <p>
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                 Fuga aliquid, iure animi soluta facere ex facilis reprehenderit suscipit? 
                                 Ut cum doloremque numquam architecto praesentium sint obcaecati officiis ea ratione a!
@@ -118,9 +123,10 @@
                                 Quasi blanditiis alias ducimus vitae iste architecto modi sit officiis dolore earum! Accusamus, eaque.
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                 Fuga aliquid, iure animi soluta facere ex facilis reprehenderit suscipit? 
-                        </p>
-                        </div>
-                    </article>                                      
+                            </p>
+                            </div>
+                        </article>
+                    </a>                                      
                 </section>                
             </div>   
             <!--Секция ссылок на ютуб видео-советов-->
@@ -138,7 +144,10 @@
         </main>
         
         <!--Боковая секция дополнительной информации(пока еще не придумал для чего)-->
+        <div class="box_vert">
+        <i class="fa-solid fa-bars fa-3x" id="aside_right_bouton"></i>
         <aside class="box_vert" id="aside_right"><!--il faut separer main et aside-->
+            
             <h3>Illum expedita</h3>
             <p class="text_aside">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -149,12 +158,13 @@
                 quo natus blanditiis quidem molestias? Incidunt alias autem molestiae eligendi impedit quod?
             </p>
         </aside>
+        </div>
     </div>
     <!--Секция подвала с контактной информацией и прочей подобной лабудой
-        <input type="checkbox" id="footer_visibility_checker" name="checkbox">
-        <label for="footer_visibility_checker"><i id="expand" class="fa-solid fa-maximize fa-2x"></i></label>
-        <label for="footer_visibility_checker"><i id="collapse" class="fa-solid fa-minimize fa-2x"></i></label>    -->
+            <label for="footer_visibility_checker"><i id="collapse" class="fa-solid fa-minimize fa-2x"></i></label>-->
     <footer>
+        <input type="checkbox" id="footer_visibility_checker" name="checkbox">
+        
         
         <div id="footer" class="box_vert justify_space_evenly">
             <div class="box_hor justify_space_evenly" id="social_network_icons">
@@ -172,6 +182,7 @@
                 <p>2022, FLOREIL</p>
             </div>             
         </div>  
+        <label for="footer_visibility_checker"><i id="expand" class="fa-solid fa-maximize fa-2x"></i></label>
             
     </footer>
 </body>

@@ -139,9 +139,6 @@ header>a{
     box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
     transition: color  0.1s ease-out, background-color  0.1s ease-out;
 }
-#search:focus ~ .menu_personal_bouton{ 
-    text-shadow: none;
-}
 
 /*Выпадающее левое боковое меню*/
 #dropout_menu{
@@ -156,6 +153,8 @@ header>a{
     position: sticky;
     top: 152px;
     margin-right: auto;
+    border: solid thin #D6902B00;
+    border-radius: 10px;
 }
 #dropout_menu_list{
     visibility: hidden;
@@ -208,6 +207,9 @@ header>a{
 main{
     width: 100%;
     border-radius: 25px;    
+}
+.article_link{
+    text-decoration: none;
 }
 #articles_box{
     flex-wrap: wrap;
@@ -324,12 +326,6 @@ aside {
     margin-right: 0;
     background-color: rgba(0, 128, 0, 0.05);
 }
-#aside_left{
-    text-align: right;
-    margin-right: 0;
-    background-position: center;
-    background-size: cover;
-}
 #aside_right{
     text-align: left;
     margin-right: 0;
@@ -339,6 +335,27 @@ aside {
     border: solid thin #008000;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
+    position: absolute;
+    visibility: hidden;
+}
+#aside_right_bouton{
+    position: sticky;
+    top: 152px;
+    margin-left: auto;
+    border: solid thin #D6902B00;
+    border-radius: 10px;
+}
+#aside_right_bouton:hover ~ #aside_right, #aside_right:hover {
+    visibility: visible;
+    position: sticky;
+    top: 190px;
+    opacity: 1;
+    transition: all 0.3s;
+}
+#aside_right_bouton:hover{
+    border: solid thin #008000;
+    border-radius: 10px;
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
 }
 
 /*Секция подвала*/
@@ -359,7 +376,7 @@ footer>p{
     position: fixed;
     right: 0;
     bottom: 0;
-    visibility: visible;
+    visibility: hidden;
     width: 250px;
     margin: 0;
     padding: 5px;
@@ -380,51 +397,53 @@ footer>div>div>p, footer>div>div>a>p{
 
 /*Попытка с помощью кнопки и псевдокласса фокус сделать включение и выключение подвала*/
 
-/*#expand{
-    color: rgb(204, 0, 255);
+#expand{
+    color: #cc4329ff;
     position: fixed;
     visibility: visible;
     bottom: 10px;
     right: 10px;
+    text-shadow: 0.5px 0.5px 1px black;
 }
-#collapse{
-    color: rgb(0, 136, 255);
+/*#collapse{    
     position: fixed;
-    visibility: visible;
-    bottom: 50px;
-    right: 50px;
-}
-
-#expand:focus ~ #footer, #collapse{
-    visibility: visible;
-}
-#expand:focus{
-    visibility: hidden;    
-}
-#collapse:focus ~ #footer,#collapse{
     visibility: hidden;
-}
-#collapse:focus ~ #expand{
-    visibility: visible;
-}
-#expand:hover{
-    color: rgba(0, 128, 0, 1);
-}
-#collapse:hover{
-    color: rgb(255, 0, 0);    
-}
+    bottom: 10px;
+    left: 10px;
+}*/
 #footer_visibility_checker{
     position: fixed;
+    visibility: hidden;
     left: 0;
     bottom: 0;
 }
-#footer_visibility_checker:focus ~ #footer, #footer_visibility_checker:focus ~ #expand{
+#footer_visibility_checker:checked ~ #footer{
+    visibility: visible;
+}
+#footer_visibility_checker ~ #footer{
     visibility: hidden;
 }
-#footer_visibility_checker:focus ~ {
-    visibility: hidden;
-}*/
+#expand:hover{
+    background-color: #cc432975;
+    border-radius: 10px;
+    border: solid thin #cc4329ff;
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+    text-shadow: 1px 1px 2px black;
+}
 
+#footer_visibility_checker:hover ~ #collapse{
+    visibility: visible;
+}
+#footer_visibility_checker:checked ~ #expand{
+    color: rgb(0, 255, 0);
+    visibility: hidden;
+}
+#footer_visibility_checker ~ #collapse{
+    visibility: hidden;
+}
+#footer_visibility_checker ~ #expand{
+    visibility: visible;
+}
 
 /*Секция иконок-кнопок*/
 
@@ -438,6 +457,9 @@ footer>div>div>p, footer>div>div>a>p{
 .fa-bars{
     color: #008000;    
     padding: 0 5px;
+}
+.fa-maximize{
+    padding: 5px;
 }
 .menu_personal_bouton{
     color: #008000;    
