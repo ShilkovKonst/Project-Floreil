@@ -29,6 +29,7 @@ h1{
     align-items: center;
     font-size: 36px;
     font-style: italic;
+    text-shadow: 1px 1px 2px black;
     font-weight: bold;
     margin: 0;
     padding-top: 0.5%;
@@ -37,9 +38,12 @@ h1{
     width: auto;
 }
 h2{
+    color: #008000;
     align-items: center;
     font-size: 24px;
     font-style: italic;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 2px;
     font-weight: bold;
     height: auto;
     padding: 5% auto;
@@ -51,6 +55,8 @@ h3{
     align-items: center;
     font-size: 20px;
     font-style: italic;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 2px;
     font-weight: bold;
     height: auto;
     padding: 5% auto;
@@ -253,12 +259,7 @@ article>div>p{
     height: 100%;
     width: 100%;
     padding: 0 10px;
-    opacity: 0;
     font-weight: bold;
-    transition: all 0.3s ease-in-out;
-}
-article>div>p:hover{
-    opacity: 1;
     transition: all 0.3s ease-in-out;
 }
 .article_interieur{
@@ -319,8 +320,6 @@ iframe{
 
 /*Секция правого бокового стационарного меню*/
 aside {
-    padding: 1%; 
-    /*flex-shrink: 1;*/
     width: 250px;
     height: 500px;
     margin-top: 0;
@@ -331,7 +330,8 @@ aside {
     text-align: left;
     margin-right: 0;
     margin-top: 0;
-    background-image: url("../images/feey-schefflera-big.jpg");
+    padding: 10px;
+    background: linear-gradient(#CC9A2999, #CC9A2975), url("../images/feey-schefflera-big.jpg");
     background-position: center;
     background-size: cover;
     border: solid thin #008000;
@@ -373,7 +373,8 @@ footer>p{
     background-size: contain;
     border: double thin rgba(0, 128, 0, 1);
     border-top-left-radius: 25px;
-    border-top-right-radius: 25px;    
+    border-top-right-radius: 25px;  
+    border-bottom-left-radius: 25px;  
     height: 125px;
     position: fixed;
     right: 0;
