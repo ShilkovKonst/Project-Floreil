@@ -47,7 +47,7 @@ h2{
     font-weight: bold;
     height: auto;
     padding: 5% auto;
-    margin: 0.5%;
+    margin: 10px;
     text-align: center;
     border-top: solid thick #008000;
 }
@@ -146,68 +146,7 @@ header>a{
     transition: color  0.1s ease-out, background-color  0.1s ease-out;
 }
 
-/*Выпадающее левое боковое меню*/
-#dropout_menu{
-    align-content:flex-start;
-    justify-content: flex-start;
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;    
-}
-#dropout_menu_bouton{
-    position: sticky;
-    top: 152px;
-    margin-right: auto;
-    border: solid thin #D6902B00;
-    border-radius: 10px;
-}
-#dropout_menu_list{
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    width: 150px;
-    list-style-type: none;   
-    margin: 0;  
-    padding: 5px 0 0 0;    
-    border: solid thin #D6902B; 
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-    background-color: #CC9A2999;
-    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
-    /*transition: all 0.3s;*/
-}
-#dropout_menu_list>li{
-    padding: 10px 0px 10px 5px;
-    margin-right: 15px;
-    margin-left: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    height: auto;
-}
-#dropout_menu_list>li>a{
-    text-decoration: none;
 
-}
-#dropout_menu_bouton:hover ~ #dropout_menu_list, #dropout_menu_list:hover {
-    visibility: visible;
-    position: sticky;
-    top: 202px;
-    opacity: 1;
-    transition: all 0.3s;
-}
-#dropout_menu_bouton:hover{
-    border: solid thin #008000;
-    border-radius: 10px;
-    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
-}
-#dropout_menu_list>li:hover{
-    border: solid thin #D6902B;
-    border-radius: 10px;
-    text-shadow: 0.5px 0.5px 1px black;    
-    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
-    transition: all 0.1s;
-}
 
 /*Главная секция*/
 main{
@@ -318,6 +257,68 @@ iframe{
     background: linear-gradient(#BF713075, #BF713000);
 }
 
+/*Выпадающее левое боковое меню*/
+#dropout_menu{
+    align-content:flex-start;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;    
+}
+#dropout_menu_bouton{
+    position: sticky;
+    top: 152px;
+    margin-right: auto;
+    border: solid thin #D6902B00;
+    border-radius: 10px;
+}
+#dropout_menu_list{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 150px;
+    list-style-type: none;   
+    margin: 0;  
+    padding: 5px 0 0 0;    
+    border: solid thin #D6902B; 
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #CC9A2999;
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+    /*transition: all 0.3s;*/
+}
+#dropout_menu_list>li{
+    padding: 10px 0px 10px 5px;
+    margin-right: 15px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    height: auto;
+}
+#dropout_menu_list>li>a{
+    text-decoration: none;
+}
+#dropout_menu_bouton:hover ~ #dropout_menu_list, #dropout_menu_list:hover {
+    visibility: visible;
+    position: sticky;
+    top: 202px;
+    opacity: 1;
+    transition: all 0.3s;
+}
+#dropout_menu_bouton:hover{
+    border: solid thin #008000;
+    border-radius: 10px;
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+}
+#dropout_menu_list>li:hover{
+    border: solid thin #D6902B;
+    border-radius: 10px;
+    text-shadow: 0.5px 0.5px 1px black;    
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+    transition: all 0.1s;
+}
+
 /*Секция правого бокового стационарного меню*/
 aside {
     width: 250px;
@@ -337,7 +338,7 @@ aside {
     border: solid thin #008000;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
-    position: absolute;
+    position: fixed;
     visibility: hidden;
 }
 #aside_right_bouton{
@@ -408,12 +409,6 @@ footer>div>div>p, footer>div>div>a>p{
     right: 10px;
     text-shadow: 0.5px 0.5px 1px black;
 }
-/*#collapse{    
-    position: fixed;
-    visibility: hidden;
-    bottom: 10px;
-    left: 10px;
-}*/
 #footer_visibility_checker{
     position: fixed;
     visibility: hidden;
@@ -433,20 +428,25 @@ footer>div>div>p, footer>div>div>a>p{
     box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
     text-shadow: 1px 1px 2px black;
 }
-
-#footer_visibility_checker:hover ~ #collapse{
-    visibility: visible;
-}
-#footer_visibility_checker:checked ~ #expand{
+/*#collapse{    
+    position: fixed;
+    visibility: hidden;
+    bottom: 10px;
+    left: 10px;
+}#footer_visibility_checker:checked ~ #expand{
     color: rgb(0, 255, 0);
     visibility: hidden;
+}
+#footer_visibility_checker:hover ~ #collapse{
+    visibility: visible;
 }
 #footer_visibility_checker ~ #collapse{
     visibility: hidden;
 }
 #footer_visibility_checker ~ #expand{
     visibility: visible;
-}
+}*/
+
 
 /*Секция иконок-кнопок*/
 
