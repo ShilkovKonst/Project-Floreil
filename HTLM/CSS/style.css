@@ -1,60 +1,72 @@
 body{
-    background-color: rgba(0, 0, 0, 0.10);
-    color: #BF7130FF;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 12px;
-    min-width: 600px;    
+    font-size: 16px;
+    min-width: 900px;    
     padding: 0;
     margin: 0 auto; 
     height: 100%;
+    background-image:linear-gradient(#CC9A2975, #BF713050), url("../images/scott-webb-light-grass.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
-header{
-    background-image: url("../images/scott-webb-pots-in-a-row.jpg");
-    background-position: center;
-    background-size: contain;
-    border: double thin rgba(0, 128, 0, 1);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    align-content: center;
+
+/*Секция шапки и заголовков*/
+header{    
+    align-content: center;    
+    height: 100px;
+}
+#h1_header{
     position: sticky;
     top: 0;
-    height: 150px;
+    background-image:radial-gradient(white, #00800000), url("../images/kelly-vohs-grass-footer.jpg");
+    background-position: left;
+    background-size: contain;
+    border: double thin rgba(0, 128, 0, 1);
+    border-bottom-right-radius: 25px;    
 }
-header>div{
-    width: 40%;
-    margin: auto 0 20px 0;
-    padding: 0;
-}
-#search{
+h1{
     color: #008000;
-    border: solid thin #008000;
-    width: 100%;
-    border-radius: 22px;
+    align-items: center;
+    font-size: 36px;
+    font-style: italic;
+    text-shadow: 1px 1px 2px black;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 0.5%;
+    padding-bottom: 0;
+    text-align: center;
+    width: auto;
+}
+h2{
+    color: #008000;
+    align-items: center;
+    font-size: 24px;
+    font-style: italic;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 2px;
+    font-weight: bold;
+    height: auto;
+    padding: 5% auto;
+    margin: 10px;
+    text-align: center;
+    border-top: solid thick #008000;
+}
+h3{
+    align-items: center;
+    font-size: 20px;
+    font-style: italic;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 2px;
+    font-weight: bold;
+    height: auto;
+    padding: 5% auto;
+    margin: 2%;
+    text-align: center;
 }
 header>a{
     color: rgba(0, 128, 0, 1);
-    box-sizing: border-box;
     padding: 0;
     margin: auto 0 5px 10px;
-}
-.icon{
-    color: #008000;
-    padding: 10px;
-    margin: auto 0;
-    border: solid thick #BF7130FF;
-    border-radius: 25px;
-}
-.justify_space_between{
-    justify-content: space-between;
-}
-
-nav{
-    display: flex;
-    align-content: center;
-    margin: 0;
-    padding: 0;
-    /*width: 30%;*/
-    width: auto;
 }
 #logo{    
     height: 75px;
@@ -64,78 +76,172 @@ nav{
     align-self: center;
     justify-content: space-around;
 }
-ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;     
+
+/*Секция поиска*/
+#search_menu{
     align-content: center;
-    justify-content:flex-end;  
+    justify-content: baseline;
+    height: 54px;
+    width: 40%;
+    padding-right: 15px;
+    margin: auto 0 15px 0;
+}
+#search{
+    color: #008000;
+    border: solid thin #008000;
+    border-radius: 22px;
+    font-size: 16px;
+    text-indent: 10px;
+    height: 36px;
     width: 100%;
+    margin: auto;
+    margin-right: 5px;
 }
-li{    
-    padding: 5px;
-    margin: auto 0 5px 0;
-    width: auto;
-    max-width: 30%;
+.text_center_vert{
+    display: block;
+    align-self: center;
 }
-header>nav>ul>li>a{
-    display: flex;
-    justify-content: center; 
-    color: #00800000;   
+.fa-bars:hover, .fa-magnifying-glass:hover{
+    text-shadow: 1px 1px 2px black;    
+    transition: color  0.1s ease-out, background-color  0.1s ease-out;
 }
 
-h1{
-    display: flex;
-    align-items: center;
-    font-size: 40px;
-    font-style: italic;
-    font-weight: bold;
-    margin: 1%;
-    padding:1%;
-    text-align: center;
-    border: solid thin transparent;
-    border-radius: 25px;
-    border: double thin rgba(0, 128, 0, 1);
+/*Секция управления личными данными, корзина, желаемое*/ 
+#menu_personal{
+    align-content: center;
+    margin: auto 0 25px 0;
+    padding: 0;
+    height: 54px;
     width: auto;
 }
-h2{
+#menu_personal_list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    height: auto;  
+    width: auto;
+}
+#menu_personal_list>li{ 
+    margin: 0 15px;
     height: auto;
-    padding: 5% auto;
-    margin: 2%;
+    width: auto;
 }
-.centered{
-    text-align: center; 
-}
-article{
-    height: auto;
-    width: 99%;
-    min-width: 10%;
-    padding: 0 5% 0 5%;
-    margin: 0 auto;
-}
-.justified_indented{
-    text-align: justify;
-    text-indent: 15px;
-}
-aside {
-    padding: 1%; 
-    flex-shrink: 1;
-    width: 15%;
-    background-color: rgba(0, 128, 0, 0.05);
-}
-main{
-    width: 70%;
-    border: double thin rgba(128, 128, 128, 0);
-    border-radius: 25px;
-}
-section{
+#menu_personal_list>li>a{
+    display: flex;
+    justify-content: center; 
+    text-decoration: none;
+    margin: auto 0;    
+    height: 100%;
     width: 100%;
 }
+.menu_personal_bouton{
+    padding: 10px;
+    border: solid thin #00800000;
+}
+.menu_personal_bouton:hover{ 
+    text-shadow: 1px 1px 2px black;
+    border-radius: 10px;
+    border: solid thin #008000;
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+    transition: color  0.1s ease-out, background-color  0.1s ease-out;
+}
+
+
+
+/*Главная секция*/
+main{
+    width: 100%;
+    border-radius: 25px;    
+}
+.article_link{
+    text-decoration: none;
+}
+#articles_box{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+article{
+    height: 390px;
+    width: 390px;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 250px;
+    box-shadow: 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+    transition: all 0.3s ease-in-out;
+}
+article:hover{    
+    height: 410px;    
+    width: 410px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 2.5px 2.5px rgba(0, 0, 0, 0.66); 
+    transition: all 0.3s ease-in-out;
+}
+article>div{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;    
+    background-color: #CC9A2999;
+    border-radius: 250px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+article>div:hover{
+    border-radius: 25px;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+article>div>p{       
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+.article_interieur{
+    background-image: url("../images/plantes_interieur.jpeg");
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+}
+.article_exterieur{
+    background-image: url("../images/plantes_exterieur.jpeg");
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+}
+.article_conseils{
+    background-image: url("../images/feey-monstera-big.jpg");
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+}
+.article_interieur:hover{
+    color: #000000;
+    background-image: url("../images/plantes_interieur.jpeg");
+    transition: all 0.3s ease-in-out;
+}
+.article_exterieur:hover{
+    color: #000000;
+    background-image: url("../images/plantes_exterieur.jpeg");
+    transition: all 0.3s ease-in-out;
+}
+.article_conseils:hover{
+    color: #000000;
+    background-image: url("../images/feey-monstera-big.jpg");
+    transition: all 0.3s ease-in-out;
+}
+
+/*Секция видео-параметров*/
 iframe{
     min-width: 400px;
     width: 30%;    
     height: auto;
     aspect-ratio: 16/9;
+    border: #008000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
 }
 #in_article_video{
     width: auto;
@@ -144,9 +250,229 @@ iframe{
 #video{
     min-width: 400px;
     flex-wrap: wrap;
-    padding: 0;
     margin: 1.5% 0 0 0; 
+    padding-bottom: 10px;
 }
+.section_background{
+    background: linear-gradient(#BF713075, #BF713000);
+}
+
+/*Выпадающее левое боковое меню*/
+#dropout_menu{
+    align-content:flex-start;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;    
+}
+#dropout_menu_bouton{
+    position: sticky;
+    top: 152px;
+    margin-right: auto;
+    border: solid thin #D6902B00;
+    border-radius: 10px;
+}
+#dropout_menu_list{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 150px;
+    list-style-type: none;   
+    margin: 0;  
+    padding: 5px 0 0 0;    
+    border: solid thin #D6902B; 
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #CC9A2999;
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+    /*transition: all 0.3s;*/
+}
+#dropout_menu_list>li{
+    padding: 10px 0px 10px 5px;
+    margin-right: 15px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    height: auto;
+}
+#dropout_menu_list>li>a{
+    text-decoration: none;
+}
+#dropout_menu_bouton:hover ~ #dropout_menu_list, #dropout_menu_list:hover {
+    visibility: visible;
+    position: sticky;
+    top: 202px;
+    opacity: 1;
+    transition: all 0.3s;
+}
+#dropout_menu_bouton:hover{
+    border: solid thin #008000;
+    border-radius: 10px;
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+}
+#dropout_menu_list>li:hover{
+    border: solid thin #D6902B;
+    border-radius: 10px;
+    text-shadow: 0.5px 0.5px 1px black;    
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+    transition: all 0.1s;
+}
+
+/*Секция правого бокового стационарного меню*/
+aside {
+    width: 250px;
+    height: 500px;
+    margin-top: 0;
+    margin-right: 0;
+    background-color: rgba(0, 128, 0, 0.05);
+}
+#aside_right{
+    text-align: left;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 10px;
+    background: linear-gradient(#CC9A2999, #CC9A2975), url("../images/feey-schefflera-big.jpg");
+    background-position: center;
+    background-size: cover;
+    border: solid thin #008000;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    position: fixed;
+    visibility: hidden;
+}
+#aside_right_bouton{
+    position: sticky;
+    top: 152px;
+    margin-left: auto;
+    border: solid thin #D6902B00;
+    border-radius: 10px;
+}
+#aside_right_bouton:hover ~ #aside_right, #aside_right:hover {
+    visibility: visible;
+    position: sticky;
+    top: 202px;
+    opacity: 1;
+    transition: all 0.3s;
+}
+#aside_right_bouton:hover{
+    border: solid thin #008000;
+    border-radius: 10px;
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+}
+
+/*Секция подвала*/
+footer>p{
+    padding: 1%;
+    margin: 1% auto;  
+    width: auto;  
+    font-weight: bold;
+}
+#footer{
+    background-image: url("../images/kelly-vohs-grass-footer.jpg");
+    background-position: center;
+    background-size: contain;
+    border: double thin rgba(0, 128, 0, 1);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;  
+    border-bottom-left-radius: 25px;  
+    height: 125px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    width: 250px;
+    margin: 0;
+    padding: 5px;
+    font-size: 12px;
+}
+footer>div>div{
+    height: 25px;
+    padding: 5px 0;
+}
+footer>div>div>p, footer>div>div>a>p{
+    margin: 0;
+    padding-right: 10px;
+}
+#social_network_icons{
+    height: 40px;
+    padding: 0;
+}
+
+/*Попытка с помощью кнопки и псевдокласса фокус сделать включение и выключение подвала*/
+
+#expand{
+    color: #cc4329ff;
+    position: fixed;
+    visibility: visible;
+    bottom: 10px;
+    right: 10px;
+    text-shadow: 0.5px 0.5px 1px black;
+}
+#footer_visibility_checker{
+    position: fixed;
+    visibility: hidden;
+    left: 0;
+    bottom: 0;
+}
+#footer_visibility_checker:checked ~ #footer{
+    visibility: visible;
+}
+#footer_visibility_checker ~ #footer{
+    visibility: hidden;
+}
+#expand:hover{
+    background-color: #cc432975;
+    border-radius: 10px;
+    border: solid thin #cc4329ff;
+    box-shadow: inset 2.5px 2.5px 1px 1px rgba(0, 0, 0, 0.66);
+    text-shadow: 1px 1px 2px black;
+}
+/*#collapse{    
+    position: fixed;
+    visibility: hidden;
+    bottom: 10px;
+    left: 10px;
+}#footer_visibility_checker:checked ~ #expand{
+    color: rgb(0, 255, 0);
+    visibility: hidden;
+}
+#footer_visibility_checker:hover ~ #collapse{
+    visibility: visible;
+}
+#footer_visibility_checker ~ #collapse{
+    visibility: hidden;
+}
+#footer_visibility_checker ~ #expand{
+    visibility: visible;
+}*/
+
+
+/*Секция иконок-кнопок*/
+
+.fa-brands{
+    margin: auto 0;
+    color: aliceblue;
+}
+.fa-regular{
+    margin: auto 0;
+}
+.fa-bars{
+    color: #008000;    
+    padding: 0 5px;
+    margin: 0;
+}
+.fa-maximize{
+    padding: 5px;
+}
+.menu_personal_bouton{
+    color: #008000;    
+    padding: 9px;    
+}
+
+
+
+
 .box_hor{
     display: flex;
 }
@@ -154,64 +480,23 @@ iframe{
     display: flex;
     flex-direction: column; 
 }
-footer>p{
-    padding: 1%;
-    margin: 1% auto;  
-    width: auto;  
-}
-
-#aside_left{
-    text-align: right;
-    margin-right: 0;
-    background-image: url("../images/feey-schefflera.jpg");
-    background-position: center;
-    background-size: cover;
-}
-#aside_right{
-    text-align: left;
-    margin-left: 0;
-    background-image: url("../images/feey-monstera.jpg");
-    background-position: center;
-    background-size: cover;
+.justified_indented{
+    text-align: justify;
+    text-indent: 15px;
 }
 .justify_space_evenly{
     justify-content: space-evenly;
 }
 .text_aside{    
     font-style: italic;
-    font-size: 11px;    
+    font-weight: bold;
+    font-size: 12px;    
 }
-header, footer, article{
-    background-color: rgba(0, 128, 0, 0.1);    
-
+.justify_space_between{
+    justify-content: space-between;
 }
-aside, article{
-    border: double thin rgba(0, 128, 0, 1);
-    border-radius: 25px;
-}
-footer{
-    background-image: url("../images/scott-webb-pots-in-a-row.jpg");
-    background-position: center;
-    background-size: contain;
-    border: double thin rgba(0, 128, 0, 1);
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;    
-    height: 150px;
-}
-main, aside, article{
-    margin: 0.5%;
-}
-/*.main_bg_image{
-    background-image: url("../images/map_of_azerim1.jpg");
-    background-size: contain;
-    background-attachment: scroll;
-}*/
-.icon:hover{
-    color: rgba(146, 255, 146, 100);
-    background-color: rgb(00, 80, 00);
-    border: solid thick transparent;
-    border-radius: 25px;
-    transition: color  0.8s ease-out, background-color  0.8s ease-out;
+.text_center_vert{
+    vertical-align: middle;
 }
 .material-symbols-outlined {
   font-variation-settings:
@@ -219,4 +504,8 @@ main, aside, article{
   'wght' 700,
   'GRAD' 0,
   'opsz' 48
+}
+a { color: inherit; } 
+*{
+    box-sizing: border-box;
 }
